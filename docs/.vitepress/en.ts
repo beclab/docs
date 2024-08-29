@@ -14,11 +14,23 @@ const side = {
           link: "/overview/introduction/getting-started/",
           collapsed: true,
           items: [
-            { text: "Linux", link: "/overview/introduction/getting-started/linux" },
-            { text: "Raspberry Pi", link: "/overview/introduction/getting-started/raspberry" },
-            { text: "MacOS", link: "/overview/introduction/getting-started/mac" },
-            { text: "Windows", link: "/overview/introduction/getting-started/windows" },
-          ]
+            {
+              text: "Linux",
+              link: "/overview/introduction/getting-started/linux",
+            },
+            {
+              text: "Raspberry Pi",
+              link: "/overview/introduction/getting-started/raspberry",
+            },
+            {
+              text: "MacOS",
+              link: "/overview/introduction/getting-started/mac",
+            },
+            {
+              text: "Windows",
+              link: "/overview/introduction/getting-started/windows",
+            },
+          ],
         },
         // { text: "BEC Architecture", link: "/overview/introduction/bec" },
         { text: "FAQ", link: "/overview/introduction/faq" },
@@ -41,7 +53,6 @@ const side = {
       text: "Protocol",
       items: [
         { text: "Overview", link: "/overview/protocol/overview" },
-        { text: "Otmoic", link: "/overview/protocol/otmoic" },
         { text: "Market", link: "/overview/protocol/market" },
         { text: "Recommend", link: "/overview/protocol/recommend" },
       ],
@@ -56,17 +67,23 @@ const side = {
           text: "Setup",
           collapsed: true,
           items: [
-            { 
+            {
               text: "Install",
-              link: "/how-to/terminus/setup/install/", 
-              collapsed: true, 
+              link: "/how-to/terminus/setup/install/",
+              collapsed: true,
               items: [
                 { text: "Linux", link: "/how-to/terminus/setup/install/linux" },
-                { text: "Raspberry Pi", link: "/how-to/terminus/setup/install/raspberry" },
+                {
+                  text: "Raspberry Pi",
+                  link: "/how-to/terminus/setup/install/raspberry",
+                },
                 { text: "MacOS", link: "/how-to/terminus/setup/install/mac" },
-                { text: "Windows", link: "/how-to/terminus/setup/install/windows" },
-              ]
-            }, 
+                {
+                  text: "Windows",
+                  link: "/how-to/terminus/setup/install/windows",
+                },
+              ],
+            },
             { text: "Wizard", link: "/how-to/terminus/setup/wizard" },
             { text: "Login", link: "/how-to/terminus/setup/login" },
           ],
@@ -229,15 +246,6 @@ const side = {
         { text: "Bill", link: "/how-to/space/bill" },
       ],
     },
-    {
-      text: "Otmoic",
-      items: [
-        {
-          text: "How to use",
-          link: "/how-to/otmoic/",
-        },
-      ],
-    },
   ],
   "/developer/": [
     {
@@ -387,48 +395,6 @@ const side = {
         //   text: "TermiPass",
         //   link: "/developer/contribute/termipass",
         // },
-        {
-          text: "Snowinning Protocol",
-          collapsed: true,
-
-          items: [
-            {
-              text: "Overview",
-              link: "/developer/contribute/snowinning/overview",
-            },
-            {
-              text: "Concepts",
-              link: "/developer/contribute/snowinning/concepts",
-            },
-            {
-              text: "Terminus Name",
-              link: "/developer/contribute/snowinning/terminus-name",
-            },
-            {
-              text: "Contract",
-              collapsed: true,
-              link: "/developer/contribute/snowinning/contract-overview",
-              items: [
-                {
-                  text: "TerminusDID",
-                  link: "/developer/contribute/snowinning/contract-tdid",
-                },
-                {
-                  text: "Reputation",
-                  link: "/developer/contribute/snowinning/contract-reputation",
-                },
-                {
-                  text: "Manager",
-                  link: "/developer/contribute/snowinning/contract-manager",
-                },
-              ],
-            },
-            {
-              text: "VC Service",
-              link: "/developer/contribute/snowinning/vc",
-            },
-          ],
-        },
         {
           text: "Develop System App",
           collapsed: true,
