@@ -14,6 +14,9 @@ import mediumZoom from "medium-zoom";
 import OSTabs from "./components/OStabs.vue";
 
 const LANGUAGE_ZH_PATH = "/zh/";
+const LANGUAGE_ZH_KEY = "zh";
+const LANGUAGE_EN_KEY = "en";
+
 const LANGUAGE_LOCAL_KEY = "language";
 let isMenuChange = false;
 
@@ -33,11 +36,15 @@ export default {
     const { lang } = useData();
 
     const routerRedirect = () => {
-      const isZh = navigator.language.startsWith("zh");
+      const startsWithZH = navigator.language.startsWith(LANGUAGE_ZH_KEY);
       const localLanguage = localStorage.getItem(LANGUAGE_LOCAL_KEY);
 
-      const language = localLanguage ? localLanguage : isZh ? "zh" : "en";
-
+      const language = localLanguage
+        ? localLanguage
+        : startsWithZH
+        ? LANGUAGE_ZH_KEY
+        : LANGUAGE_EN_KEY;
+      const isZh = language === LANGUAGE_ZH_KEY;
       if (isZh && !route.path.includes(LANGUAGE_ZH_PATH)) {
         router.go(`/zh${route.path}`);
         return;
