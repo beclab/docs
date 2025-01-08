@@ -56,6 +56,7 @@ export default {
       menuDom?.addEventListener("click", (e) => {
         const target = e.target as Element;
         const isLink = target?.classList.contains("VPLink");
+        console.log("isLink", target, isLink);
         if (isLink) {
           isMenuChange = true;
         }
@@ -84,10 +85,8 @@ export default {
     watch(
       () => lang.value,
       (newValue) => {
-        if (isMenuChange) {
-          localStorage.setItem(LANGUAGE_LOCAL_KEY, newValue);
-          isMenuChange = false;
-        }
+        localStorage.setItem(LANGUAGE_LOCAL_KEY, newValue);
+        isMenuChange = false;
       }
     );
 
