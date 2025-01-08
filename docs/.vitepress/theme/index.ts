@@ -55,8 +55,8 @@ export default {
       const menuDom = document.querySelector(".menu .VPMenu");
       menuDom?.addEventListener("click", (e) => {
         const target = e.target as Element;
-        const isLink = target?.classList.contains("VPLink");
-        console.log("isLink", target, isLink);
+        const isLink = target.closest(".VPMenuLink");
+        console.log("isLink", isLink);
         if (isLink) {
           isMenuChange = true;
         }
