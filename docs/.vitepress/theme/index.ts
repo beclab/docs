@@ -15,7 +15,6 @@ import OSTabs from "./components/OStabs.vue";
 
 const LANGUAGE_ZH_PATH = "/zh/";
 const LANGUAGE_LOCAL_KEY = "language";
-const localLanguage = localStorage.getItem(LANGUAGE_LOCAL_KEY);
 let isMenuChange = false;
 
 export default {
@@ -35,6 +34,8 @@ export default {
 
     const routerRedirect = () => {
       const isZh = navigator.language.startsWith("zh");
+      const localLanguage = localStorage.getItem(LANGUAGE_LOCAL_KEY);
+
       const language = localLanguage ? localLanguage : isZh ? "zh" : "en";
 
       if (isZh && !route.path.includes(LANGUAGE_ZH_PATH)) {
